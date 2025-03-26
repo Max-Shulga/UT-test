@@ -1,0 +1,37 @@
+@use "@/styles/colors" as colors;
+
+.button-states {
+  transition: background 0.3s, transform 0.2s ease-in-out, filter 0.2s;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  &:active {
+    filter: brightness(0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.primary {
+  margin: 0 auto;
+  background: colors.$main-blue;
+  color: colors.$main-white;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  @extend .button-states;
+}
+
+.secondary {
+  background: colors.$main-white;
+  padding: 0.656rem 1.5rem;
+  color: colors.$text-dark-button;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 16px;
+  @extend .button-states;
+}

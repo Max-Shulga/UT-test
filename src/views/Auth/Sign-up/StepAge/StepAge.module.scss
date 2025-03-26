@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+
+  * {
+    margin: 0;
+  }
+
+  @media (min-width: 744px) {
+    gap: 1.5rem;
+  }
+  @media (min-width: 1080px) {
+    gap: 2rem;
+  }
+  button,p{
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.preferenceAgeContainer, .userAgeContainer {
+  display: flex;
+  max-width: 400px;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.userAgeContainer {
+  flex-direction: column;
+  max-width: 400px;
+  @media (min-width: 744px) {
+    flex-direction: row;
+  }
+}

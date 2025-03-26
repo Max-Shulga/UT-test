@@ -1,0 +1,14 @@
+@use "@/styles/colors" as colors;
+
+.input{
+  width: 100%;
+  padding: 1rem 0.75rem 1rem 1rem;
+  border:none;
+  outline: none;
+  border-radius: 12px;
+  background-color: colors.$light-bg;
+  color: colors.$main-text;
+  &::placeholder {
+    color: colors.$secondary-text;
+  }
+}
