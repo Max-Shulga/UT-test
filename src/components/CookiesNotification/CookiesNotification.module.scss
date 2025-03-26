@@ -1,0 +1,51 @@
+@use "@/styles/colors" as colors;
+
+.cookieBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0.5rem;
+  background:white;
+  border: 1px solid #86efac;
+  color: colors.$text-dark-button;
+  padding: 0.5rem;
+  border-radius: 8px;
+  backdrop-filter: blur(40px);
+  box-shadow: 0 8px 16px 0 #0F1A2F0F;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 600px;
+  justify-content: space-between;
+  text-align: center;
+  z-index: 9999;
+  @media (min-width: 744px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (min-width: 1440px) {
+    width: calc(100% - 5rem);
+    margin: 1rem 2.5rem;
+    max-width: none;
+    transform: translateX(-52%);
+  }
+  p {
+    font-size: 10px;
+    flex-grow: 1;
+    text-align: center;
+    @media (min-width: 1440px) {
+      font-size: 14px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+  }
+  button{
+
+    min-width: 104px;
+    box-shadow: 0 4px 12px 0 #343A3F1F;
+
+  }
+}
